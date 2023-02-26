@@ -1,0 +1,21 @@
+
+DEVELOPMENT PLAN:
+--------------------------------------------------------------------------------------------
+
+--> DONE 1. Get {data} folder path and {.csv} files paths.
+--> DONE 2. Read the {.csv} files ONLY !
+
+         DO THE SQLstatements in {sql_statements_creator.py} DINAMICALLY IF IT POSSIBLE...
+
+--> DONE 3. Inspect and repair the data columns if it neccessary, check and transform
+            the data types of the rows!!!!
+
+--> DONE 4. Create Postgres CREATE TABLE statements
+--> DONE 5. Create Postgres INSERT statements;
+
+         MANAGE THE FLOW ...
+
+         5. create {app_manager.py} file
+         6. Create {sql_handler.py}
+
+--------------------------------------------------------------------------------------------
