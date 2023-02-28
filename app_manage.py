@@ -11,9 +11,7 @@ if __name__ == '__main__':
 	file_handler           = FileHandler()
 	data_properties        = file_handler.file_inspector()
 	creation_statements    = create_statement()
-	print(creation_statements)
 	insertation_statements = insert_statement()
-	print(insertation_statements)
 	postgres               = PostgresHandler()
 
 	# print(data_properties) # <-- Only Debugging!
@@ -47,5 +45,5 @@ if __name__ == '__main__':
 		except Exception as e:
 			print(f'Error in "sql_handler.py" during INSERTION  process: {str(e)}')
 
-
+	r = input(('Nyomj le egy betűt, hogy kilépjek!'))
 

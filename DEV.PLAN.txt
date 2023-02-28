@@ -1,6 +1,7 @@
 
 DEVELOPMENT PLAN:
 --------------------------------------------------------------------------------------------
+TASK1:
 
 --> DONE 1. Get {data} folder path and {.csv} files paths.
 --> DONE 2. Read the {.csv} files ONLY !
@@ -10,12 +11,25 @@ DEVELOPMENT PLAN:
 --> DONE 3. Inspect and repair the data columns if it neccessary, check and transform
             the data types of the rows!!!!
 
---> DONE 4. Create Postgres CREATE TABLE statements
+--> DONE 4. Create dinamically the CREATE TABLE statements query...
+
 --> DONE 5. Create Postgres INSERT statements;
+--> DONE 6. Create {sql_handler.py} file;
+--> DONE 7. create {app_manager.py} file;
 
          MANAGE THE FLOW ...
 
-         5. create {app_manager.py} file
-         6. Create {sql_handler.py}
+--> DONE 8. Run CREATE TABLE query...
+--> DONE 9. Run ISERT INTO query... (load the data into the tables);
+--> DONE 10. Determinate in CREATE TABLE queries (based on data) the:
+
+         DONE --> PRIMARY KEYs
+         - FOREGIN KEY REFERENCES (tables connection with each other)
+         - Creation Rules
+
+         11. Run CREATE TABLE query again by order...
+         12. Run Postgres INSERT statements by order...
+
 
 --------------------------------------------------------------------------------------------
+TASK 2:

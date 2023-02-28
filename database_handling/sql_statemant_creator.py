@@ -3,6 +3,9 @@ from file_handling.file_handler import FileHandler
 
 file_handler            = FileHandler()
 data_properties         = file_handler.file_inspector()
+print(data_properties)
+
+foregin_key_dict = {}
 
 def columns_name_validator(cols):
 	"""
@@ -20,11 +23,14 @@ def create_statement():
 	"""
 	This func. creates the CREATE TABLE statements dinamically.
 	:return: A creation_statement list
+	:rtype : list
 	"""
 	creation_statement_list = []
+
 	for i in data_properties['file_list']:
+
 		data = file_handler.get_csv_data(file_path = data_properties['file_path'][i])
-		cols = file_handler.get_columns_name_from_csv(d = data)
+		cols = file_handler.get_columns_name_from_csv(df = data)
 
 		columns_name_validator(cols)
 
@@ -46,36 +52,46 @@ def create_statement():
 		statement = f'CREATE TABLE if not exists {i}('
 
 		cnt = 0
-		# this loop does the creation statement ...
 		for idx, item in enumerate(cols):
-			if cnt == len(cols ) -1:
-				statement += f'{str(item)} {data_types[idx]});'
-			else:
-				statement += f'{str(item)} {data_types[idx]}, '
-			cnt += 1
+			try:
+				if cnt == len(cols) -1:
+					if item == data_properties['primary_key'][i]:
+						statement += f'{item} {data_types[idx]} PRIMARY KEY);'
+					else:
+						statement += f'{item} {data_types[idx]});'
+				else:
+					if item == data_properties['primary_key'][i]:
+						statement += f'{item} {data_types[idx]} PRIMARY KEY, '
+					else:
+						statement += f'{item} {data_types[idx]}, '
+				cnt += 1
+			except Exception as e:
+				print(f"{str(e)}The {i}.csv has no determinated Primary key")
 
 		creation_statement_list.append(statement)
+		# break
 
 	return creation_statement_list
 
 
 def insert_statement():
-
+	"""
+	This func. creates the INSERT statements dinamically.
+	:return: A list with the insertation_statements
+	:rtype : list
+	"""
 	insert_statement_list = []
-
 	for i in data_properties['file_list']:
-		data = file_handler.get_csv_data(file_path=data_properties['file_path'][i])
-		cols = file_handler.get_columns_name_from_csv(d=data)
-		rows = file_handler.get_rows_from_csv(df = data)
-		# print(rows)
 
+		data = file_handler.get_csv_data(file_path=data_properties['file_path'][i])
+		cols = file_handler.get_columns_name_from_csv(df = data)
 
 		columns_name_validator(cols)
 
 		statement = f'INSERT INTO {i}('
 
 		cnt = 0
-		# this loop does the creation statement ...
+		# this loop does the insertion statement ...
 		for idx, item in enumerate(cols):
 			if cnt == len(cols) - 1:
 				statement += f'{str(item)})VALUES('
@@ -89,13 +105,13 @@ def insert_statement():
 			else:
 				statement += f'{str(item)} , '
 			cnt += 1
-
 		insert_statement_list.append(statement)
 
 	return insert_statement_list
 
 if __name__ == '__main__':
+	import pprint
 	creation = create_statement()
-	print(creation)
+	pprint.pprint(creation)
 	insertion = insert_statement()
-	print(insertion)
+	pprint.pprint(insertion)

@@ -22,6 +22,7 @@ Aki Postgrest választ következő driverek közül válasszon: psycopg2, SQLAlc
 MongoDb esetéb pymongo libraryt használjátok
 
 Relációs adatbázis esetén a file-okat KÜLÖN TÁBLÁKBA  töltéstek be
+
 a betöltés után plusz pontért manuálisan határozzátok meg, hogy mely táblákra milyen constrainteket tesztek
 foreing_key és primary_key -eket értem constraintek alatt
 Mongodb esetében nem szükséges
@@ -31,7 +32,7 @@ aki szeretné csinálhat külön collection-öket, amelyek logikailag szétdarab
 2. feladat: adatbázistól függetlenül ugyan ez a feladat
 A HR úgy döntött, hogy szeretné BŐVÍTENI a dolgozók számát,
 így csoportos és egyéni feltételt hirdet megannyi pozícióra
-írjatok olyan programot, amely lehetővé teszi, hogy 1 vagy több embert egyidejű
+írjatok olyan programot, amely lehetővé teszi, hogy 1 vagy több ember egyidejű
 felvétele során kelettkezett dolgozói adatok betöltésre kerüljenek
 a betöltés során használt TESZTADATOT MI KÉSZÍTJÜK EL
 
