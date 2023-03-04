@@ -1,6 +1,6 @@
 import os
 from file_handling.file_handler import FileHandler
-from database_handling.sql_statemant_creator import CreationRules
+from database_handling.sql_statement_creator import CreationRules
 from database_handling.sql_handler import PostgresHandler
 from database_handling.selects import select_statements
 from calculator.calculate import calculate_salary_options
@@ -11,6 +11,11 @@ from database_handling.new_insertion import (
 
 
 def examination_task_manager():
+	"""
+	This func. responsible for the magagement of program that data have been inserted into the Postgres database.
+	:return: Loaded data into the database, and a {.json} file in the {json_folder}...
+	:rtype: .json file
+	"""
 	file_handler = FileHandler()
 	postgres = PostgresHandler()
 	sql_statements = CreationRules()

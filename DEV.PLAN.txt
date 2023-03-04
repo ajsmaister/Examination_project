@@ -4,32 +4,68 @@ DEVELOPMENT PLAN:
 TASK1:
 
 --> DONE 1. Get {data} folder path and {.csv} files paths.
---> DONE 2. Read the {.csv} files ONLY !
 
-         DO THE SQLstatements in {sql_statements_creator.py} DINAMICALLY IF IT POSSIBLE...
+                        - parameters.py
+                                > def data_path    (DONE)
+                                > add POSTGRES_KEY (DONE)
 
---> DONE 3. Inspect and repair the data columns if it neccessary, check and transform
-            the data types of the rows!!!!
+--> DONE 2. Read the {.csv} files ONLY, write {.json} files !
 
---> DONE 4. Create dinamically the CREATE TABLE statements query...
+                        - class FileHandler
+                                > def file_inspector                             (DONE)
+                                > def get_csv_data (@staticmethod)               (DONE)
+                                > def get_columns_name_from_csv (@staticmethod)  (DONE)
+                                > def get_rows_from_csv (@staticmethod)          (DONE)
+
+--> DONE 3. Inspect and repair the data columns if it neccessary;
+
+                        - class CreationRules
+                                > def columns_name_validator (@staticmethod) (DONE)
+
+--> DONE 4. Create dinamically the CREATE TABLE statements query with determinated PRIMARY KEY and FOREIGN KEYS...
+            check and transform the data types of the rows!!!!
+
+                        - class CreationRules
+                                > def create_statement !!!!!!!!!!!!!!!
 
 --> DONE 5. Create Postgres INSERT statements;
---> DONE 6. Create {sql_handler.py} file;
+
+                        - class CreationRules
+                                > def insert_statement (DONE)
+
+         6. Create {sql_handler.py} file;
+
+                        - class PostgresHandler
+                                > def execute_create               (DONE)
+                                > def execute_insert               (DONE)
+                                > def execute_insert_new_employees !!!!!!!!!!!!!!!
+
 --> DONE 7. create {app_manager.py} file;
 
          MANAGE THE FLOW ...
 
 --> DONE 8. Run CREATE TABLE query...
 --> DONE 9. Run ISERT INTO query... (load the data into the tables);
---> DONE 10. Determinate in CREATE TABLE queries (based on data) the:
-
-         DONE --> PRIMARY KEYs
-         - FOREGIN KEY REFERENCES (tables connection with each other)
-         - Creation Rules
-
-         11. Run CREATE TABLE query again by order...
-         12. Run Postgres INSERT statements by order...
-
 
 --------------------------------------------------------------------------------------------
 TASK 2:
+
+--> DONE 10. Determinate the SELECT queries, based on requirements and options of :
+
+                        - PRIMARY KEYs (DONE)
+                        - FOREGIN KEY REFERENCES (tables connection with each other) !!!!!!!!!!!!!!!
+
+         11. Run SELECT query by order... !!!!!!!!!!!!
+         12. Run Postgres INSERT NEW DATA statements by order... !!!!!!!!!!!!!!!
+
+--------------------------------------------------------------------------------------------
+TASK 3:
+
+--------------------------------------------------------------------------------------------
+TASK 4:
+
+--------------------------------------------------------------------------------------------
+TASK 5:
+
+                        - class FileHandler
+                                --> def write:json (create folder, and files) !!!!!!!!!!!!!!!!!!

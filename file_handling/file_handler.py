@@ -93,25 +93,29 @@ class FileHandler:
 		df_rows = list(df.itertuples(index = False, name  = None))
 		return df_rows
 
-	# @staticmethod
-	# here comes the {.json} writer func!....
+	@staticmethod
+	def write_json(path, data):
+		import json
+		folder_path = []
+		if data == None:
+			print("The data is NONE! The app cannot be written it ...")
+		elif not os.path.exists(path):
+			os.mkdir(path)
+			print("The {json_folder} has been created!")
+		else:
+			print("The json_folder already exists...")
 
-if __name__ == '__main__':
+		import datetime
+		timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+		json_path = os.path.join(path, f"statistic{''}.json")
 
-	# TESTING file_handler...
-	import pprint
-	PATH = data_path()
-	Test = FileHandler()
+		try:
+			if os.path.exists(json_path):
+				print(f"The file {json_path} is ALREADY Exists!")
+				pass
+			with open(json_path, "w", encoding="utf-8") as f:
+				json.dump(data, f, ensure_ascii=False, indent=4)
+			print(f"The file {json_path} has been written in Examination_project/json_folder...")
+		except Exception as e:
+			print(str(e))
 
-	test_data_properties = Test.file_inspector() # <-- It is a dict!
-	pprint.pprint(test_data_properties)
-	test_path            = test_data_properties['file_path'][test_data_properties['file_list'][0]]
-	# print(test_path)
-
-	d    = Test.get_csv_data(test_path)
-	cols = Test.get_columns_name_from_csv(df = d)
-	rows = Test.get_rows_from_csv(df = d)
-
-	# pprint.pprint(cols)
-	# print('--------------------')
-	# pprint.pprint(rows)

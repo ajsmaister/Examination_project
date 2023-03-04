@@ -48,8 +48,6 @@ class CreationRules:
 					temp[idx_wrong_col_name_in_temp] = rep_col_name
 				else:
 					continue
-		# print('---------------------------------')
-		# print(temp)
 		return temp
 
 
@@ -82,7 +80,7 @@ class CreationRules:
 			self.data_properties['file_list'][4],  # 5 <-- 'job_history.csv'
 			self.data_properties['file_list'][3],  # 6 <-- 'jobs.csv'
 		]
-		# creation order : ['regions', 'countries', 'locations', 'departments', 'job_history', 'jobs', 'employees']
+		# ['regions', 'countries', 'locations', 'departments', 'employees', 'job_history', 'jobs']
 
 		# Here add primary key to tables...
 		primary_key_dict = {
@@ -94,7 +92,6 @@ class CreationRules:
 			"job_history": "",
 			"jobs": "",
 		}
-
 		# Here add Foreign keys as a table connection parametre in order to complex filtering ways...
 		foreign_key_dict = {
 			# "countries": {
@@ -116,7 +113,6 @@ class CreationRules:
 			# 	"departments": "department_id",
 			# },
 		}
-
 		if foreign_key_dict != {}:
 			self.data_properties['file_list'] = creation_order
 		if primary_key_dict is not None:
@@ -221,13 +217,8 @@ class CreationRules:
 										foreign_key = f"FOREIGN KEY ({value}) REFERENCES {key} ({value}) ON UPDATE CASCADE ON DELETE CASCADE"
 										statement += foreign_key
 									counter += 1
-						# print(i + " = " + statement)
 
-									# if cnt == nums:
-									# 	break
 						foreign_key_statements.append(statement)
-						# print(foreign_key_statements)
-						# print('--------------------------')
 
 					else:
 						continue
@@ -284,17 +275,3 @@ class CreationRules:
 
 		return insert_statement_list
 
-if __name__ == '__main__':
-	import pprint
-
-	Test      = CreationRules()
-	sql_rules = Test.creation_rules()
-	creation  = Test.create_statement()
-	insertion = Test.insert_statement()
-
-	# -------------------------------------------------
-	pprint.pprint(sql_rules)
-	print('--------------------------')
-	print(creation)
-	# print('--------------------------')
-	print(insertion)

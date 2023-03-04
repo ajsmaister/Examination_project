@@ -1,96 +1,101 @@
 {
     "differences": {
-        "best_salary": 25687,
-        "worst_salary": 2241,
-        "average_salary": 6883,
-        "difference": 23446
+        "best_salary": 25263,
+        "worst_salary": 2224,
+        "average_salary": 6854,
+        "difference": 23039
     },
     "best_salaries_per_positions": [
         {
             "name": "Steven King",
-            "salary": 25687,
+            "salary": 25263,
             "position": "President"
         },
         {
             "name": "Lex De Haan",
-            "salary": 17953,
+            "salary": 18051,
             "position": "Administration Vice President"
         },
         {
             "name": "Neena Kochhar",
-            "salary": 18268,
+            "salary": 18053,
             "position": "Administration Vice President"
         },
         {
             "name": "Nancy Greenberg",
-            "salary": 12612,
+            "salary": 12794,
             "position": "Finance Manager"
         },
         {
             "name": "Shelley Higgins",
-            "salary": 12706,
+            "salary": 12946,
             "position": "Accounting Manager"
         },
         {
             "name": "Alberto Errazuriz",
-            "salary": 12906,
+            "salary": 12717,
             "position": "Sales Manager"
         },
         {
             "name": "Karen Partners",
-            "salary": 14404,
+            "salary": 14276,
             "position": "Sales Manager"
         },
         {
             "name": "John Russell",
-            "salary": 14962,
+            "salary": 14707,
             "position": "Sales Manager"
         },
         {
             "name": "Michael Hartstein",
-            "salary": 13745,
+            "salary": 13737,
             "position": "Marketing Manager"
         }
     ],
     "worst_salaries_per_positions": [
         {
+            "name": "Peter Vargas",
+            "salary": 2643,
+            "position": "Stock Clerk"
+        },
+        {
+            "name": "Joshua Patel",
+            "salary": 2643,
+            "position": "Stock Clerk"
+        },
+        {
             "name": "Hazel Philtanker",
-            "salary": 2319,
+            "salary": 2368,
             "position": "Stock Clerk"
         },
         {
             "name": "Ki Gee",
-            "salary": 2566,
+            "salary": 2536,
             "position": "Stock Clerk"
         },
         {
             "name": "TJ Olson",
-            "salary": 2241,
+            "salary": 2224,
             "position": "Stock Clerk"
         },
         {
             "name": "James Marlow",
-            "salary": 2655,
+            "salary": 2630,
             "position": "Stock Clerk"
         },
         {
             "name": "Steven Markle",
-            "salary": 2361,
+            "salary": 2373,
             "position": "Stock Clerk"
         },
         {
             "name": "James Landry",
-            "salary": 2559,
+            "salary": 2564,
             "position": "Stock Clerk"
         },
         {
-            "name": "Randall Perkins",
-            "salary": 2647,
-            "position": "Shipping Clerk"
-        },
-        {
             "name": "Martha Sullivan",
-            "salary": 2631,
+            "salary": 2626,
             "position": "Shipping Clerk"
         }
     ]
