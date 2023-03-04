@@ -52,48 +52,8 @@ class FileHandler:
 			'file_path': file_path_dict
 		}
 
-		#  'file_list': ['regions',
-		#                'countries',
-		#                'locations',
-		#                'departments',
-		#                'jobs',
-		#                'employees',
-		#                'job_history'],
-
-		primary_key_dict = {
-			"regions": "region_id",
-			"countries": "country_id",
-			"locations": "location_id",
-			"departments": "department_id",
-			"jobs": "job_id",
-			"employees": "employee_id",
-			"job_history": " ",
-		}
-		foreign_key_dict = {
-			"regions": ["no_id"],
-			"countries": ["region_id"],
-			"locations": ["country_id"],
-			"departments": ["location_id"],
-			"jobs": ["no_id"],
-			"employees": ["job_id", "department_id"],
-			"job_history": ["job_id", "department_id"],
-		}
-		# This list determinated the running order in app_manage.py ...
-		creation_order = [
-			data_prop['file_list'][6],  # <-- 'regions'
-			data_prop['file_list'][0],  # <-- 'countries'
-			data_prop['file_list'][5],  # <-- 'locations'
-			data_prop['file_list'][1],  # <-- 'departments'
-			data_prop['file_list'][3],  # <-- 'jobs'
-			data_prop['file_list'][2],  # <-- 'employee'
-			data_prop['file_list'][4],  # <-- 'job_history'
-		]
-
-		data_prop['file_list']   = creation_order
-		data_prop['primary_key'] = primary_key_dict
-		data_prop['foreign_key'] = foreign_key_dict
-
 		return data_prop
+
 
 	@staticmethod
 	def get_csv_data(file_path):
@@ -133,6 +93,8 @@ class FileHandler:
 		df_rows = list(df.itertuples(index = False, name  = None))
 		return df_rows
 
+	# @staticmethod
+	# here comes the {.json} writer func!....
 
 if __name__ == '__main__':
 
