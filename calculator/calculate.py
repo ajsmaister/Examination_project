@@ -19,6 +19,7 @@ def calculate_salary_options(data):
 	salaries  = []
 	five_perc_peersons   = []
 	enhanced_salary_list = []
+	minimum_enhancing_perc = 3
 	maximum_enhancing_perc = 5
 
 	# get that persons, who do NOT earn more than the minimum salary, and create a salaries list...
@@ -41,7 +42,7 @@ def calculate_salary_options(data):
 
 	# Calculate the salary enrichment by requirements...
 	for item in rows:
-		if (math.ceil(float(item[1])) > median_salary) and (item[1] < math.ceil(float(item[1])) * (1 + randint(3, 5) / 100)):
+		if (math.ceil(float(item[1])) > median_salary) and (item[1] < (math.ceil(float(item[1])) + (math.ceil(float(item[1])) / 100) * maximum_enhancing_perc)):
 			ran = (1 + randint(3, 5) / 100)
 			best = {'name'    : item[0],
 			        'salary'  : math.ceil(float(item[1])) * ran,
@@ -50,7 +51,7 @@ def calculate_salary_options(data):
 			        }
 			enhanced_salary_list.append(best['salary'])
 			best_salaries_per_positions.append(best)
-		elif (math.ceil(float(item[1])) > median_salary) and (item[1] > math.ceil(float(item[1])) * (1 + randint(3, 5) / 100)):
+		elif (math.ceil(float(item[1])) > median_salary) and (item[1] > (math.ceil(float(item[1])) + (math.ceil(float(item[1])) / 100) * minimum_enhancing_perc)):
 			best = {'name'    : item[0],
 			        'salary'  : item[3],
 			        'position': item[4],
@@ -82,9 +83,9 @@ def calculate_salary_options(data):
 	del rows
 
 	JSON_FORM["differences"] = {
-		"best_salary": max(enhanced_salary_list),
-		"worst_salary": min(enhanced_salary_list),
-		"difference": max(enhanced_salary_list) - min(enhanced_salary_list)
+		"best_salary": int(max(enhanced_salary_list)),
+		"worst_salary": int(min(enhanced_salary_list)),
+		"difference": int(max(enhanced_salary_list)) - int(min(enhanced_salary_list))
 	}
 	del enhanced_salary_list
 	# collect the {.json} form ...
