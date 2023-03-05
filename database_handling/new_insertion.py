@@ -11,7 +11,7 @@ data_to_insert = {
     "employees"  : [207, 'Gonzales', 'Nyunyoka', 'nyunyoka@sqltutorial.org', '715.123.0000', '2007-01-17',
                    'YO_INS', 5000.00, 0.3, 101, 280],
     "job_history": [280, '1998-03-24', '1998-12-31', 'YO_INS', 280],
-    "jobs"       : ['YO_INS', 'Yoga instructor', 20000.0, 40000.0]
+    "jobs"       : ['YO_INS', 'Yoga instructor', 2000, 6000]
 }
 
 d = data_to_insert

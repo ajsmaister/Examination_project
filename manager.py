@@ -9,7 +9,20 @@ from database_handling.new_insertion import (
 	insertion_statements_for_news
 )
 
+def runtime(func):
+	import time
 
+	def wrapper(*args, **kwargs):
+		start_time = time.time()
+		result = func(*args, **kwargs)
+		end_time = time.time()
+
+		print("\nThe {} func. run time was: {} seconds till end".format(func.__name__.upper(), end_time - start_time))
+		return result
+
+	return wrapper
+
+@runtime
 def examination_task_manager():
 	"""
 	This func. responsible for the magagement of program that data have been inserted into the Postgres database.
@@ -51,34 +64,38 @@ def examination_task_manager():
 			print(f" The data from the '{sql_creation_rules['file_list'][idx]}.csv' file has been inserted...")
 		except Exception as e:
 			print(f'Error in "sql_handler.py" during INSERTION  process: {str(e)}')
-
+	print('-----------------------------------')
 	# here add new employees into the database ...
-	postgres.execute_insert_new_data(
-		creation_order=sql_creation_rules['file_list'],
-		data=data_to_insert,
-		insert_tatement=insertion_statements_for_news
-	)
+	try:
+		existing_data = postgres.execute_query_on_db(
+			query="SELECT * FROM employees WHERE employee_id = '{}'".format(data_to_insert['employees'][0])
+		)
+		if not existing_data:
+			postgres.execute_insert_new_data(
+				creation_order=sql_creation_rules['file_list'],
+				data=data_to_insert,
+				insert_statement=insertion_statements_for_news
+			)
+	except Exception as e:
+		print(str(e))
 
-	# Modify data in database, and handling the requirements ...
+
+	# Modify data in database ...
 	postgres.execute_query_on_db(query=select_statements[0])
 
-	avg_salary   = postgres.execute_get_data_from_db(select=select_statement[1])
-	avarrage_sel = avg_salary['rows'][0][0]
-	max_salary   = postgres.execute_get_data_from_db(select=select_statement[2])
-	max_sel      = max_salary['rows'][0][0]
-	min_salary   = postgres.execute_get_data_from_db(select=select_statement[3])
-	min_sel      = min_salary['rows'][0][0]
-	db_data      = postgres.execute_get_data_from_db(select=select_statement[4])
+	db_data = postgres.execute_get_data_from_db(select=select_statement[0])
 
-	# create {.json} forms...
-	info      = avarrage_sel, max_sel, min_sel, db_data
-	json_data = calculate_salary_options(avg=info[0], data=info[3])
-	print(json_data)
+	# create {.json} forms with requirements...
+	json_data = calculate_salary_options(data=db_data)
 
 	# create{json_folder} and write{.json} files into the folder...
 	json_folder_path = os.path.join(os.path.dirname(__file__), "json_folder")
 
-	file_handler.write_json(path=json_folder_path, data=json_data)
+	file_handler.write_json(
+		path=json_folder_path,
+		data=json_data
+	)
+
 
 if __name__ == '__main__':
 	examination_task_manager()

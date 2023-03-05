@@ -6,7 +6,7 @@ from parameters import POSTGRES_KEY
 
 class PostgresHandler:
 	"""
-	This class handling the database operations like CREATE, INSERT, SELECT, UPDATE
+	This class handling the database operations like CREATE, INSERT, SELECT...
 	"""
 	postgres_url = POSTGRES_KEY
 	conn         = psycopg2.connect(POSTGRES_KEY)
@@ -26,11 +26,10 @@ class PostgresHandler:
 				conn.execute(text(insert_statement), **item)
 
 
-	def execute_insert_new_data(self, creation_order, data, insert_tatement):
+	def execute_insert_new_data(self, creation_order, data, insert_statement):
 		for item in creation_order:
-			print(item)
 			with self.engine.connect() as conn:
-				conn.execute(insert_tatement[item], data[item])
+				conn.execute(insert_statement[item], data[item])
 
 
 	def execute_query_on_db(self, query):

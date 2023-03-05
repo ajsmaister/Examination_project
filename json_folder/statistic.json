@@ -1,102 +1,659 @@
 {
     "differences": {
-        "best_salary": 25263,
-        "worst_salary": 2224,
-        "average_salary": 6854,
-        "difference": 23039
+        "best_salary": 24960.0,
+        "worst_salary": 2163.0,
+        "difference": 22797.0
     },
     "best_salaries_per_positions": [
         {
             "name": "Steven King",
-            "salary": 25263,
-            "position": "President"
+            "salary": 24960.0,
+            "position": "President",
+            "percentage of salary analysis": "4 %"
         },
         {
             "name": "Lex De Haan",
-            "salary": 18051,
-            "position": "Administration Vice President"
+            "salary": 17510.0,
+            "position": "Administration Vice President",
+            "percentage of salary analysis": "3 %"
         },
         {
             "name": "Neena Kochhar",
-            "salary": 18053,
-            "position": "Administration Vice President"
+            "salary": 17680.0,
+            "position": "Administration Vice President",
+            "percentage of salary analysis": "4 %"
         },
         {
             "name": "Nancy Greenberg",
-            "salary": 12794,
-            "position": "Finance Manager"
+            "salary": 12600.0,
+            "position": "Finance Manager",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Luis Popp",
+            "salary": 7176.0,
+            "position": "Accountant",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Jose Manuel Urman",
+            "salary": 8190.0,
+            "position": "Accountant",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Ismael Sciarra",
+            "salary": 8008.0,
+            "position": "Accountant",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "John Chen",
+            "salary": 8446.0,
+            "position": "Accountant",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Daniel Faviet",
+            "salary": 9450.0,
+            "position": "Accountant",
+            "percentage of salary analysis": "5 %"
         },
         {
             "name": "Shelley Higgins",
-            "salary": 12946,
-            "position": "Accounting Manager"
+            "salary": 12600.0,
+            "position": "Accounting Manager",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "William Gietz",
+            "salary": 8549.0,
+            "position": "Public Accountant",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Eleni Zlotkey",
+            "salary": 11025.0,
+            "position": "Sales Manager",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Gerald Cambrault",
+            "salary": 11440.0,
+            "position": "Sales Manager",
+            "percentage of salary analysis": "4 %"
         },
         {
             "name": "Alberto Errazuriz",
-            "salary": 12717,
-            "position": "Sales Manager"
+            "salary": 12480.0,
+            "position": "Sales Manager",
+            "percentage of salary analysis": "4 %"
         },
         {
             "name": "Karen Partners",
-            "salary": 14276,
-            "position": "Sales Manager"
+            "salary": 14040.0,
+            "position": "Sales Manager",
+            "percentage of salary analysis": "4 %"
         },
         {
             "name": "John Russell",
-            "salary": 14707,
-            "position": "Sales Manager"
+            "salary": 14700.0,
+            "position": "Sales Manager",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Kimberely Grant",
+            "salary": 7350.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Jack Livingston",
+            "salary": 8736.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Jonathon Taylor",
+            "salary": 8858.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Alyssa Hutton",
+            "salary": 9152.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Ellen Abel",
+            "salary": 11440.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Elizabeth Bates",
+            "salary": 7592.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "William Smith",
+            "salary": 7622.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Tayler Fox",
+            "salary": 10080.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Harrison Bloom",
+            "salary": 10300.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Lisa Ozer",
+            "salary": 12075.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "David Lee",
+            "salary": 7140.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Mattea Marvins",
+            "salary": 7488.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Danielle Greene",
+            "salary": 9880.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Clara Vishney",
+            "salary": 10815.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Sarath Sewall",
+            "salary": 7350.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Louise Doran",
+            "salary": 7875.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Lindsey Smith",
+            "salary": 8400.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Allan McEwen",
+            "salary": 9360.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Patrick Sully",
+            "salary": 9785.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Janette King",
+            "salary": 10500.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Oliver Tuvault",
+            "salary": 7210.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Nanette Cambrault",
+            "salary": 7875.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Christopher Olsen",
+            "salary": 8240.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Peter Hall",
+            "salary": 9360.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "David Bernstein",
+            "salary": 9880.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Peter Tucker",
+            "salary": 10400.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Den Raphaely",
+            "salary": 11550.0,
+            "position": "Purchasing Manager",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Shanta Vollman",
+            "salary": 6825.0,
+            "position": "Stock Manager",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Payam Kaufling",
+            "salary": 8216.0,
+            "position": "Stock Manager",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Adam Fripp",
+            "salary": 8446.0,
+            "position": "Stock Manager",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Matthew Weiss",
+            "salary": 8320.0,
+            "position": "Stock Manager",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Alexander Hunold",
+            "salary": 9450.0,
+            "position": "Programmer",
+            "percentage of salary analysis": "5 %"
         },
         {
             "name": "Michael Hartstein",
-            "salary": 13737,
-            "position": "Marketing Manager"
+            "salary": 13520.0,
+            "position": "Marketing Manager",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Susan Mavris",
+            "salary": 6695.0,
+            "position": "Human Resources Representative",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Hermann Baer",
+            "salary": 10500.0,
+            "position": "Public Relations Representative",
+            "percentage of salary analysis": "5 %"
         }
     ],
     "worst_salaries_per_positions": [
         {
+            "name": "Jennifer Whalen",
+            "salary": 4532.0,
+            "position": "Administration Assistant",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Charles Johnson",
+            "salary": 6510.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Sundita Kumar",
+            "salary": 6344.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Amit Banda",
+            "salary": 6448.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Sundar Ande",
+            "salary": 6592.0,
+            "position": "Sales Representative",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Karen Colmenares",
+            "salary": 2625.0,
+            "position": "Purchasing Clerk",
+            "percentage of salary analysis": 5
+        },
+        {
+            "name": "Guy Himuro",
+            "salary": 2678.0,
+            "position": "Purchasing Clerk",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Sigal Tobias",
+            "salary": 2940.0,
+            "position": "Purchasing Clerk",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Shelli Baida",
+            "salary": 3045.0,
+            "position": "Purchasing Clerk",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Alexander Khoo",
+            "salary": 3224.0,
+            "position": "Purchasing Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Kevin Mourgos",
+            "salary": 6090.0,
+            "position": "Stock Manager",
+            "percentage of salary analysis": "5 %"
+        },
+        {
             "name": "Peter Vargas",
-            "salary": 2643,
-            "position": "Stock Clerk"
+            "salary": 2600.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Randall Matos",
+            "salary": 2704.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Curtis Davies",
+            "salary": 3255.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Trenna Rajs",
+            "salary": 3605.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "3 %"
         },
         {
             "name": "Joshua Patel",
-            "salary": 2643,
-            "position": "Stock Clerk"
+            "salary": 2575.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "John Seo",
+            "salary": 2835.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Stephen Stiles",
+            "salary": 3296.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Renske Ladwig",
+            "salary": 3744.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "4 %"
         },
         {
             "name": "Hazel Philtanker",
-            "salary": 2368,
-            "position": "Stock Clerk"
+            "salary": 2310.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "5 %"
         },
         {
             "name": "Ki Gee",
-            "salary": 2536,
-            "position": "Stock Clerk"
+            "salary": 2496.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Michael Rogers",
+            "salary": 2987.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Jason Mallin",
+            "salary": 3432.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "4 %"
         },
         {
             "name": "TJ Olson",
-            "salary": 2224,
-            "position": "Stock Clerk"
+            "salary": 2163.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "3 %"
         },
         {
             "name": "James Marlow",
-            "salary": 2630,
-            "position": "Stock Clerk"
+            "salary": 2600.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Mozhe Atkinson",
+            "salary": 2884.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Laura Bissot",
+            "salary": 3465.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "5 %"
         },
         {
             "name": "Steven Markle",
-            "salary": 2373,
-            "position": "Stock Clerk"
+            "salary": 2266.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "3 %"
         },
         {
             "name": "James Landry",
-            "salary": 2564,
-            "position": "Stock Clerk"
+            "salary": 2496.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Irene Mikkilineni",
+            "salary": 2835.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Julia Nayer",
+            "salary": 3328.0,
+            "position": "Stock Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Douglas Grant",
+            "salary": 2678.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Donald OConnell",
+            "salary": 2730.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Kevin Feeney",
+            "salary": 3120.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Alana Walsh",
+            "salary": 3255.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Vance Jones",
+            "salary": 2912.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Samuel McCain",
+            "salary": 3328.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Britney Everett",
+            "salary": 4017.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Sarah Bell",
+            "salary": 4120.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Randall Perkins",
+            "salary": 2625.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": 5
+        },
+        {
+            "name": "Timothy Gates",
+            "salary": 2987.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Jennifer Dilly",
+            "salary": 3780.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Kelly Chung",
+            "salary": 3990.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Anthony Cabrio",
+            "salary": 3150.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Julia Dellinger",
+            "salary": 3502.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Alexis Bull",
+            "salary": 4223.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Nandita Sarchand",
+            "salary": 4368.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Girard Geoni",
+            "salary": 2884.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "3 %"
         },
         {
             "name": "Martha Sullivan",
-            "salary": 2626,
-            "position": "Shipping Clerk"
+            "salary": 2625.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": 5
+        },
+        {
+            "name": "Jean Fleaur",
+            "salary": 3224.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Winston Taylor",
+            "salary": 3360.0,
+            "position": "Shipping Clerk",
+            "percentage of salary analysis": "5 %"
+        },
+        {
+            "name": "Diana Lorentz",
+            "salary": 4368.0,
+            "position": "Programmer",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Valli Pataballa",
+            "salary": 4992.0,
+            "position": "Programmer",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "David Austin",
+            "salary": 4944.0,
+            "position": "Programmer",
+            "percentage of salary analysis": "3 %"
+        },
+        {
+            "name": "Bruce Ernst",
+            "salary": 6240.0,
+            "position": "Programmer",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Pat Fay",
+            "salary": 6240.0,
+            "position": "Marketing Representative",
+            "percentage of salary analysis": "4 %"
+        },
+        {
+            "name": "Gonzales Nyunyoka",
+            "salary": 5150.0,
+            "position": "Yoga instructor",
+            "percentage of salary analysis": "3 %"
         }
     ]
 }
