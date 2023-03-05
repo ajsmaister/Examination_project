@@ -96,6 +96,3 @@ def calculate_salary_options(data):
 
 
 
-
-
-
