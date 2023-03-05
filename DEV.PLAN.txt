@@ -6,39 +6,39 @@ TASK1:
 --> DONE 1. Get {data} folder path and {.csv} files paths.
 
                         - parameters.py
-                                > def data_path    (DONE)
-                                > add POSTGRES_KEY (DONE)
+                                > def data_path
+                                > add POSTGRES_KEY
 
---> DONE 2. Read the {.csv} files ONLY, write {.json} files !
+--> DONE 2. Read the {.csv} files ONLY !
 
                         - class FileHandler
-                                > def file_inspector                             (DONE)
-                                > def get_csv_data (@staticmethod)               (DONE)
-                                > def get_columns_name_from_csv (@staticmethod)  (DONE)
-                                > def get_rows_from_csv (@staticmethod)          (DONE)
+                                > def file_inspector
+                                > def get_csv_data (@staticmethod)
+                                > def get_columns_name_from_csv (@staticmethod)
+                                > def get_rows_from_csv (@staticmethod)
 
 --> DONE 3. Inspect and repair the data columns if it neccessary;
 
                         - class CreationRules
-                                > def columns_name_validator (@staticmethod) (DONE)
+                                > def columns_name_validator (@staticmethod)
 
---> DONE 4. Create dinamically the CREATE TABLE statements query with determinated PRIMARY KEY and FOREIGN KEYS...
+--> DONE 4. Create dinamically CREATE TABLE statements query with determinated PRIMARY KEY and FOREIGN KEYS...
             check and transform the data types of the rows!!!!
 
                         - class CreationRules
-                                > def create_statement !!!!!!!!!!!!!!!
+                                > def create_statement
 
 --> DONE 5. Create Postgres INSERT statements;
 
                         - class CreationRules
-                                > def insert_statement (DONE)
+                                > def insert_statement
 
          6. Create {sql_handler.py} file;
 
                         - class PostgresHandler
-                                > def execute_create               (DONE)
-                                > def execute_insert               (DONE)
-                                > def execute_insert_new_employees !!!!!!!!!!!!!!!
+                                > def execute_create
+                                > def execute_insert
+                                > def execute_insert_new_employees
 
 --> DONE 7. create {app_manager.py} file;
 
@@ -52,20 +52,28 @@ TASK 2:
 
 --> DONE 10. Determinate the SELECT queries, based on requirements and options of :
 
-                        - PRIMARY KEYs (DONE)
-                        - FOREGIN KEY REFERENCES (tables connection with each other) !!!!!!!!!!!!!!!
+                        - PRIMARY KEYs
+                        - FOREGIN KEY REFERENCES
 
-         11. Run SELECT query by order... !!!!!!!!!!!!
-         12. Run Postgres INSERT NEW DATA statements by order... !!!!!!!!!!!!!!!
+--> DONE 11. Create {new_insertion.py} with new insertion TEST data...
+--> DONE 11. Create {nselects.py} with the neccessary SELECT statement...
+--> DONE 13. Run SELECT query by order...
+
+                         - class PostgresHandler
+                                > def execute_query_on_db
 
 --------------------------------------------------------------------------------------------
 TASK 3:
 
+--> DONE 13. Create {calculate.py} file in order to accomplishts the requirements...
+
 --------------------------------------------------------------------------------------------
 TASK 4:
 
---------------------------------------------------------------------------------------------
-TASK 5:
-
+--> DONE 14. Create {statistic.json}
                         - class FileHandler
-                                --> def write:json (create folder, and files) !!!!!!!!!!!!!!!!!!
+                                > def write:json (create folder, and files)
+
+===========================================================================================
+Completed...
+

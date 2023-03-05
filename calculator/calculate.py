@@ -81,7 +81,6 @@ def calculate_salary_options(data):
 	# in order to clear memory and avoid the duplications in {JSON_FORM}...
 	del rows
 
-	print(enhanced_salary_list)
 	JSON_FORM["differences"] = {
 		"best_salary": max(enhanced_salary_list),
 		"worst_salary": min(enhanced_salary_list),
